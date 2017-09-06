@@ -1,9 +1,7 @@
 public def find_and_replace(string, str1, str2)
-  array = string.split(" ")
-  array.each_index { |i|
-  if array[i] == str1
-  array[i] = str2
+  mystring = ""
+  if string.include? str1
+  mystring = string.gsub str1, str2
   end
-}
-array.join(" ")
+  mystring
 end
